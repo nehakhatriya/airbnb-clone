@@ -1,9 +1,31 @@
 import { Button } from '@material-ui/core'
-import React from 'react'
+import React,{Component} from 'react'
 import SearchResult from './SearchResult'
 import './SearchPage.css'
+import axios from 'axios'
 
-function SearchPage() {
+class SearchPage extends Component{
+
+  state={
+    places:[],
+    place:{}
+  }
+
+componentDidMount=()=>{
+  axios.get("http://localhost:8010/airbnb")
+  .then(res=>{
+    console.log(res.data)
+    this.setState({places:res.data})
+  })
+  .catch(err=>{
+    console.log(err)
+  })
+}
+
+  render(){
+
+    var searchplaces=this.state.places.map(element =>
+        <SearchResult place={element}/>)
     return (
         <div className="searchpage">
           <div className="searchpage_info">
@@ -15,40 +37,10 @@ function SearchPage() {
           <Button variant="outlined">Rooms and beds</Button>
           <Button variant="outlined">More filters</Button>
           </div>   
-        <SearchResult
-        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bedroom-ideas-rds-work-queens-road-08-1593114639.jpg"
-        location="Private room in center of London"
-        title="Stay at this spacious Edwardian house"
-        description="1 guest. 1 bedroom . 1 bed . 1 shared bathroom . kitchen . wifi . free parking"
-        star="4.73"
-        price="Rs 700/night"
-        total="Rs 1700 total"/>
-         <SearchResult
-        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bedroom-ideas-rds-work-queens-road-08-1593114639.jpg"
-        location="Private room in center of London"
-        title="Stay at this spacious Edwardian house"
-        description="1 guest. 1 bedroom . 1 bed . 1 shared bathroom . kitchen . wifi . free parking"
-        star="4.73"
-        price="Rs 700/night"
-        total="Rs 1700 total"/>
-         <SearchResult
-        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bedroom-ideas-rds-work-queens-road-08-1593114639.jpg"
-        location="Private room in center of London"
-        title="Stay at this spacious Edwardian house"
-        description="1 guest. 1 bedroom . 1 bed . 1 shared bathroom . kitchen . wifi . free parking"
-        star="4.73"
-        price="Rs 700/night"
-        total="Rs 1700 total"/>
-         <SearchResult
-        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bedroom-ideas-rds-work-queens-road-08-1593114639.jpg"
-        location="Private room in center of London"
-        title="Stay at this spacious Edwardian house"
-        description="1 guest. 1 bedroom . 1 bed . 1 shared bathroom . kitchen . wifi . free parking"
-        star="4.73"
-        price="Rs 700/night"
-        total="Rs 1700 total"/>
+       {searchplaces}
         </div>
     )
+  }
 }
 
 export default SearchPage

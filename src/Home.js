@@ -8,24 +8,14 @@ function Home() {
         <div className="home">
            <Banner/> 
            <div className="home_section">
-               <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwoxzd-nHyiA3ouYKS6QWiHYEwtmq8woJJSQ&usqp=CAU" 
-               title="3 Bedroom flat " description="Unique activities we can do together" />
-               <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP3XqdcxQiqmlJJkTF74Z3KwMZ3a5zJP3HaQ&usqp=CAU" 
-               title="Penthouse in london" description="Spaces are more than just to sleep" />
-               <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-njVBULIJTc4W-lHbGyzMzslSDuihWlzmZw&usqp=CAU" 
-               title="Entire homes" description="Comfortable for private spaces"/>
-               <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA2SPHsG8fukvGfen83ovkwMOEjgtfabekjA&usqp=CAU" 
-               title="Unique stays" description="Comfortable for private spaces"/>
-           </div>
-           <div className="home_section">
-               <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA2SPHsG8fukvGfen83ovkwMOEjgtfabekjA&usqp=CAU" 
-               title="Unique stays" description="Comfortable for private spaces"/>
-               <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-njVBULIJTc4W-lHbGyzMzslSDuihWlzmZw&usqp=CAU" 
-               title="Entire homes" description="Comfortable for private spaces"/>
-               <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP3XqdcxQiqmlJJkTF74Z3KwMZ3a5zJP3HaQ&usqp=CAU" 
-               title="Penthouse in london" description="Spaces are more than just to sleep" />
-               <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwoxzd-nHyiA3ouYKS6QWiHYEwtmq8woJJSQ&usqp=CAU" 
-               title="3 Bedroom flat " description="Unique activities we can do together." />
+               <Card src="https://a0.muscache.com/im/pictures/a0316ecb-e49b-4b3a-b6b6-c2876b820e8c.jpg?im_w=320" 
+               title="Entire Homes"/>
+               <Card src="https://a0.muscache.com/im/pictures/ff69ac49-64e7-4f4a-ae2b-ee01163d0790.jpg?im_w=320" 
+               title="Cabins and cottages" />
+               <Card src="https://a0.muscache.com/im/pictures/ce6814ba-ed53-4d6e-b8f8-c0bbcf821011.jpg?im_w=320" 
+               title="Uniques Stays" />
+               <Card src="https://a0.muscache.com/im/pictures/fbe849a4-841a-41b3-b770-419402a6316f.jpg?im_w=320" 
+               title="Pets welcome" />
            </div>
         </div>
     )
